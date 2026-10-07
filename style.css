@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* achtergrond afbeeldingen*/
+.aboutMePage {
+    background: url(Computer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.projectsPage {
+    background: url(Projects.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.blogPage {
+    background: url(Blog.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'calibri', sans-serif;
+}
+
+nav {
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+li:hover{
+    background-color: lightgray;
+}
+
+nav a{
+    height: 100%;
+    padding:0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+#navElement:hover{
+    background-color: black;
+    
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menuButtonOpen {
+    display: none;
+}
+
+.page-sheet {
+  width: 90%;                  
+  max-width: 800px;            
+  margin: 8% auto 40px auto; 
+  min-height: 80vh;            
+
+  background-color: #ffffff;
+  border-radius: 8px;          
+  padding: 50px 60px;        
+  box-sizing: border-box;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/*Current page*/
+a[aria-current="page"] {
+    font-weight: bold;
+    color: #000000;
+    background-color: lightgray;
+}
+
+section {
+    margin-top: 40px;
+}
+
+@media(max-width: 768px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .hideOnDesktop {
+        display: flex;
+    }
+    .menuButtonOpen {
+        display: flex;
+    }
+}
+
+@media(min-width: 769px) {
+    .hideOnDesktop {
+        display: none;
+    }
+    .sidebar {
+        display: none !important;
+    }
+}
+
+@media(max-width: 480px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .page-sheet {
+        max-width: 100%;
+        width: 100%;
+    }
+}
